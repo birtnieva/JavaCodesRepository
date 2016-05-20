@@ -1,0 +1,49 @@
+import java.util.HashMap;
+
+public class DemoPair {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		HashMap<String, Integer> hm = new HashMap<String, Integer>();
+		
+		String an = "anum";
+		String bn = "bnum";
+		String cn = "cnum";
+		String dn = "dnum";
+		
+		hm.put("anum", 1);
+		hm.put("bnum", 2);
+		hm.put("cnum", 3);
+		hm.put("dnum", 4);
+		
+		System.out.println("Print out key-value pairs: ");
+		System.out.println(an + " : " + hm.get("anum"));
+		System.out.println(bn + " : " + hm.get("bnum"));
+		System.out.println(cn + " : " + hm.get("cnum"));
+		System.out.println(dn + " : " + hm.get("dnum"));
+		
+		int a = hm.get("anum");
+	  
+		hm.put(an, ++a);
+		hm.put(bn, hm.get(bn)+5);
+		hm.put(cn, 100);
+		
+		System.out.println("\nPrint out modified values: ");
+		System.out.println(an + " : " + hm.get(an));
+		System.out.println(bn + " : " + hm.get(bn));
+		System.out.println(cn + " : " + hm.get(cn));
+		System.out.println(dn + " : " + hm.get(dn));
+		
+		System.out.println("\nChecking existence of a key.");
+		
+		String en = "ename";
+		
+		if (hm.get(en) != null) {
+			System.out.println(en + " in HashMap.");
+		}
+		else {
+			System.out.println(en + " key missing.");
+		}
+	}
+}
